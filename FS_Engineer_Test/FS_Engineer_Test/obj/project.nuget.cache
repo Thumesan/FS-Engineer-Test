@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q+jJ0Ey7/q1R2/h4iv0E9YKZ8ozbq7NN3EO6MreOZsDCifrUF6qF46e4A+3VYCOgnNiUT+6ojRG3dPuC3eXhVg==",
+  "success": true,
+  "projectFilePath": "D:\\Thumesan\\FS-Engineer-Test\\FS_Engineer_Test\\FS_Engineer_Test\\FS_Engineer_Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\thumesan.moodley\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\thumesan.moodley\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\thumesan.moodley\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
+    "C:\\Users\\thumesan.moodley\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\thumesan.moodley\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\thumesan.moodley\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\thumesan.moodley\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\thumesan.moodley\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
