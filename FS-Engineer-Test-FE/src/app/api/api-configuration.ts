@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ApiConfiguration {
-  rootUrl: string = '/api';
+  rootUrl: string = 'https://fs-engineer-test.herokuapp.com';
 }
 
 /**
