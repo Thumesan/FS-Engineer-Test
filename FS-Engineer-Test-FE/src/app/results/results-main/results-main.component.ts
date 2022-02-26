@@ -53,6 +53,9 @@ export class ResultsMainComponent implements OnInit, OnDestroy {
     this.subscriptions.add(this.chuckService.chuckCategoriesGet$Json().subscribe((categories) => {
       this.chuckCategoriesObject = categories;
       this.loading = false;
+    }, (err) => {
+      this.loading = false;
+      this.hasError = true;
     }));
   }
 
@@ -63,6 +66,7 @@ export class ResultsMainComponent implements OnInit, OnDestroy {
         this.swapiPeopleObject = people;
         this.loading = false;
       }, (err) => {
+        this.loading = false;
         this.hasError = true;
       })
     );
@@ -75,6 +79,7 @@ export class ResultsMainComponent implements OnInit, OnDestroy {
         this.loading = false;
         this.searchResponse = searchResponse;
       }, (err) => {
+        this.loading = false;
         this.hasError = true;
       })
     );
@@ -88,6 +93,7 @@ export class ResultsMainComponent implements OnInit, OnDestroy {
         this.chuckJokeResults.push(jokes);
         this.loading = false;
       }, (err) => {
+        this.loading = false;
         this.hasError = true;
       })
     );
