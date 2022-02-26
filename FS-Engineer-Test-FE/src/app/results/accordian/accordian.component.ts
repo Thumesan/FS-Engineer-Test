@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-accordian',
   templateUrl: './accordian.component.html',
   styleUrls: ['./accordian.component.scss']
 })
-export class AccordianComponent implements OnInit {
+export class AccordianComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CardModel } from '../models/card.model';
 
@@ -7,18 +7,14 @@ import { CardModel } from '../models/card.model';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   @Input()
   data!: CardModel;
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-  }
-
   navigate(route: string) {
     this.router.navigate(['/results', route]);
-
   }
 
 }

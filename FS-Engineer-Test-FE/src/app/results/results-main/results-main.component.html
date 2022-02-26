@@ -5,6 +5,9 @@
     <div *ngIf="this.loading">
       <app-loading></app-loading>
     </div>
+    <div *ngIf="this.hasError">
+      <p>An error has occurred.</p>
+    </div>
     <ng-container *ngIf="!this.loading"
       [ngTemplateOutlet]="this.param === 'chuck' ? chuck : this.param === 'swapi' ? swapi : search"
       [ngTemplateOutletContext]="{ $implicit: context}"></ng-container>

@@ -1,4 +1,3 @@
-import { query } from '@angular/animations';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -19,6 +18,7 @@ export class ResultsMainComponent implements OnInit, OnDestroy {
   swapiPeopleObject: SwapiPeople = {};
   chuckJokeResults: ChuckJokes[] = [];
   searchResponse: SearchResponse = {};
+  hasError: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -62,6 +62,8 @@ export class ResultsMainComponent implements OnInit, OnDestroy {
       this.swapiService.swapiPeopleGet$Json().subscribe((people) => {
         this.swapiPeopleObject = people;
         this.loading = false;
+      }, (err) => {
+        this.hasError = true;
       })
     );
   }
@@ -72,6 +74,8 @@ export class ResultsMainComponent implements OnInit, OnDestroy {
       this.searchService.searchQueryGet$Json({query: event}).subscribe((searchResponse) => {
         this.loading = false;
         this.searchResponse = searchResponse;
+      }, (err) => {
+        this.hasError = true;
       })
     );
   }
@@ -83,6 +87,8 @@ export class ResultsMainComponent implements OnInit, OnDestroy {
         this.chuckJokeResults = [];
         this.chuckJokeResults.push(jokes);
         this.loading = false;
+      }, (err) => {
+        this.hasError = true;
       })
     );
   }
