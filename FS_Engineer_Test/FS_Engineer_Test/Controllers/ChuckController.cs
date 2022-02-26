@@ -27,5 +27,16 @@ namespace FS_Engineer_Test.Controllers
             return Ok(categories);
         }
 
+        [HttpGet("joke/{category}")]
+        public async Task<ActionResult<ChuckJokes>> GetRandomJokeByCategory([FromRoute] string category)
+        {
+            ChuckJokes jokes = await _chuckRepo.GetRandomJokeByCategory(category);
+            if (jokes == null)
+            {
+                return NoContent();
+            }
+            return Ok(jokes);
+        }
+
     }
 }

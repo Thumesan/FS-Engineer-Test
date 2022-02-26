@@ -22,10 +22,12 @@ namespace FS_Engineer_Test
         {
             services.AddCors(options =>
                 {
-                    options.AddDefaultPolicy(
-                      builder => builder.WithOrigins(""));
-                    options.AddPolicy("livePolicy", builder =>
-                        builder.WithOrigins(""));
+                    options.AddPolicy("AllowAll", builder =>
+                    {
+                        builder
+                            .AllowAnyOrigin()
+                            .AllowAnyMethod();
+                    });
                 }
             );
             services.RegisterRepos();
