@@ -1,0 +1,15 @@
+.card {
+  position: relative;
+  box-shadow: darkcyan;
+}
+.card-img-top {
+  min-height: 320px;
+}
+
+.card-body {
+  min-height: 225px;
+}
+
+.card:hover {
+  background-color: #cde8e9;
+}

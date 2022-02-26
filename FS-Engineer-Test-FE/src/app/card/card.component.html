@@ -1,0 +1,8 @@
+<div class="shadow-lg card" style="width: 18rem;">
+  <img [src]="data.iconUrl" class="card-img-top p-2" alt="No Image">
+  <div class="card-body d-flex flex-column justify-content-center align-items-center mt-4">
+    <h5 class="card-title d-flex justify-content-center">{{data.title}}</h5>
+    <p class="card-text">{{data.description}}</p>
+    <a class="btn btn-primary" (click)="navigate(data.routing)">Go to</a>
+  </div>
+</div>

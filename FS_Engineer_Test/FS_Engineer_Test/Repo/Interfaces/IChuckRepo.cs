@@ -7,5 +7,6 @@ namespace FS_Engineer_Test.Repo.Interfaces
     {
         Task<ChuckCategories> GetChuckCategories();
         Task<ChuckSearchResponse> SearchChuckJokes(string query);
+        Task<ChuckJokes> GetRandomJokeByCategory(string category);
     }
 }

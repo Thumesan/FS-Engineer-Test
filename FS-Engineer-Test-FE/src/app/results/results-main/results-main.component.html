@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="row">
+  </div>
+  <div class="row">
+    <div *ngIf="this.loading">
+      <app-loading></app-loading>
+    </div>
+    <ng-container *ngIf="!this.loading"
+      [ngTemplateOutlet]="this.param === 'chuck' ? chuck : this.param === 'swapi' ? swapi : search"
+      [ngTemplateOutletContext]="{ $implicit: context}"></ng-container>
+  </div>
+</div>
+
+<ng-template #chuck let-category>
+  <div class="d-flex flex-row mt-5" *ngIf="chuckCategoriesObject">
+    <div class="catChip p-1" *ngFor="let category of chuckCategoriesObject.categories">
+      <button type="button" class="btn btn-outline-primary catChip" (click)="selectCategory(category)">{{ category
+        }}</button>
+    </div>
+  </div>
+  <div class="results pt-4" *ngIf="chuckJokeResults.length > 0">
+    <ngb-accordion activeIds="{{chuckJokeResults[0].id}}">
+      <ngb-panel id="{{joke.id}}" title="Joke" *ngFor="let joke of chuckJokeResults">
+        <ng-template ngbPanelContent>
+          <div class="row">
+            <div class="col-md-2">
+              <img class="img-thumbnail rounded icon" [src]="joke.icon_url" />
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <label>
+                  Joke
+                </label>
+                <span class="value">{{ joke.value }}</span>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+</ng-template>
+
+<ng-template #swapi let-people>
+  <div class="results pt-4" *ngIf="swapiPeopleObject.results">
+    <ngb-accordion [closeOthers]="true">
+      <ngb-panel title="{{ person.name }}" *ngFor="let person of swapiPeopleObject.results">
+        <ng-template ngbPanelContent>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <label>
+                  Character
+                </label>
+                <span class="value">{{ person.name }}</span>
+                <label>
+                  Mass
+                </label>
+                <span class="value">{{ person.mass }}</span>
+                <label>
+                  Birth Year
+                </label>
+                <span class="value">{{ person.birth_Year }}</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <label>
+                  Hair Colour
+                </label>
+                <span class="value">{{ person.hair_Color }}</span>
+                <label>
+                  Skin Colour
+                </label>
+                <span class="value">{{ person.skin_Color }}</span>
+                <label>
+                  Gender
+                </label>
+                <span class="value">{{ person.gender }}</span>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+</ng-template>
+
+<ng-template #search>
+  <app-search (searchValue)="doSearch($event)"></app-search>
+  <div class="row">
+    <div class="col-md-6" *ngIf="searchResponse.chuckSearchResponse">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Chuck Norris Results</h5>
+          <div class="mb-2" *ngFor="let joke of searchResponse.chuckSearchResponse.result">
+            <span class="value">{{ joke.value }}</span>
+            <br />
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" *ngIf="searchResponse.swapiSearchResponse">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Star Wars Results</h5>
+          <div class="row mb-2" *ngFor="let person of searchResponse.swapiSearchResponse.results">
+            <label>
+              Character
+            </label>
+            <span class="value">{{ person.name }}</span>
+            <br />
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
