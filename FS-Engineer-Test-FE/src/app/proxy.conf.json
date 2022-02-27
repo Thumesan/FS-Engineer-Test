@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://fs-engineer-test.herokuapp.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {"^/api" : ""}
+  }
+}

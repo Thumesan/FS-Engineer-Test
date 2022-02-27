@@ -1,0 +1,12 @@
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\FS_Engineer_Test.exe
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\appsettings.Development.json
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\appsettings.json
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\FS_Engineer_Test.dll
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\FS_Engineer_Test.deps.json
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\FS_Engineer_Test.runtimeconfig.json
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\FS_Engineer_Test.pdb
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\Microsoft.OpenApi.dll
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\Newtonsoft.Json.dll
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\Swashbuckle.AspNetCore.Swagger.dll
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Thumesan\FS-Engineer-Test\FS_Engineer_Test\FS_Engineer_Test\bin\Release\netcoreapp3.1\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
